@@ -1,5 +1,10 @@
 "use client";
-import ControlledLottie from "./components/ControlledLottie";
+import dynamic from "next/dynamic";
+
+
+const ControlledLottie = dynamic(() => import("./components/ControlledLottie"), {
+  ssr: false,
+});
 
 export default function Home() {
   return (
